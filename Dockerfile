@@ -45,6 +45,7 @@ USER node
 # For container platforms requiring external health checks:
 #   1. Set OPENCLAW_GATEWAY_TOKEN or OPENCLAW_GATEWAY_PASSWORD env var
 #   2. Override CMD: ["node","openclaw.mjs","gateway","--allow-unconfigured","--bind","lan"]
-CMD ["node", "packages/gateway/dist/index.js", "--port", "3000", "--host", "0.0.0.0"]
+CMD ["pnpm", "start:gateway", "--", "--port", "3000", "--host", "0.0.0.0"]
+
 
 
